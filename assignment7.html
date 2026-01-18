@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .login-box {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+        function validateLogin() {
+            const correctPassword = "admin123"; // password set by developer
+            const enteredPassword = document.getElementById("password").value;
+
+            if (enteredPassword === correctPassword) {
+                window.open("success.html", "_blank", "width=400,height=300");
+            } else {
+                alert("Invalid password!");
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div class="login-box">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <br>
+        <button onclick="validateLogin()">Login</button>
+    </div>
+
+</body>
+</html>

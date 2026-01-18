@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>prompt box form</title>
+<script>
+// function to get names through prompt boxes function getnames() {
+// prompt for first name 
+var firstname = prompt("enter your first name: ");
+// prompt for last name
+var lastname = prompt("enter your last name: ");
+
+// display the entered values in textboxes
+document.getelementbyId("fname").value = firstname;
+document.getelementbyId("lname").value = lastname;
+}
+</script>
+</head>
+
+<body>
+<h1>enter your details</h1>
+
+<form>
+<label for="fname">first name:</label>
+<input type="text" id="fname" readonly><br><br>
+
+<label for="lname">last name:</label>
+<input type="text" id="lname" readonly><br><br>
+
+<input type="button" value="enter names" onclick="getnames()">
+</form>
+
+</body>
+</html>

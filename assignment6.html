@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Status Bar Mouse Events</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+        function showMessage(message) {
+            window.status = message;
+            return true;
+        }
+    </script>
+</head>
+<body>
+
+    <button
+        onmouseover="showMessage('Mouse is over the button')"
+        onmouseout="showMessage('Mouse left the button')"
+        onmousedown="showMessage('Mouse button pressed')"
+        onmouseup="showMessage('Mouse button released')">
+        Hover Me
+    </button>
+
+</body>
+</html>
